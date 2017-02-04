@@ -1,0 +1,539 @@
+$highlight: #58A4B0;
+// $background: #1F232D;
+$background: #13151C;
+$darkGrey: rgba(225,225,225, .05);
+$midGrey: lighten(#13151C,7%);
+$overlay: rgba(0,0,0, .85);
+$lightOverlay: rgba(0,0,0, .25);
+
+$topBarHeight: 4.5em;
+
+//fonts
+
+// Raleway-Thin.ttf 100
+// Raleway-ThinItalic.ttf
+
+// Raleway-ExtraLight.ttf 200
+// Raleway-ExtraLightItalic.ttf
+
+// Raleway-Light.ttf 300
+// Raleway-LightItalic.ttf
+
+// Raleway-Regular.ttf 400
+// Raleway-Italic.ttf
+
+// Raleway-Medium.ttf 500
+// Raleway-MediumItalic.ttf
+
+// Raleway-SemiBold.ttf 600
+// Raleway-SemiBoldItalic.ttf
+
+// Raleway-Bold.ttf 700
+// Raleway-BoldItalic.ttf
+
+// Raleway-ExtraBold.ttf 800
+// Raleway-ExtraBoldItalic.ttf
+
+// Raleway-Black.ttf  900
+// Raleway-BlackItalic.ttf
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+///
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/LeagueGothic-Italic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/LeagueGothic-Regular.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/LeagueGothic-CondensedItalic.otf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/LeagueGothic-CondensedRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import '_flex.scss';
+@import '_normalize.scss';
+@import '_utilities.scss';
+body,a {
+  background: $background;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Raleway';
+  text-decoration: none;
+}
+
+.artist_in-enter {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25px, 0);
+}
+
+.artist_in-enter.artist_in-enter-active {
+    opacity: 1;
+    transition: all 350ms ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.artist_in-leave {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.artist_in-leave.artist_in-leave-active {
+    opacity: 0.01;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transition: all 250ms ease-in-out;
+}
+
+.outer_wrapper {
+    top: 1.75em; // native phone status bar
+    overflow: hidden;
+}
+
+.permalink {
+  text-align: center;
+
+  padding: 1em;
+}
+.sub_header {
+    text-transform: uppercase;
+    font-size: .7em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 2em 0 1em 2em;
+}
+
+.text_group {
+    font-weight: 300;
+    font-size: .8em;
+    padding: 0em 2em 2em 2em;
+    line-height: 1.7em;
+    opacity: .6;
+}
+
+.spinner_container {
+  margin: 8em 0;
+}
+
+
+.button--outline {
+  border: 1px solid #fff;
+  border-radius: 100em;
+  padding: .5em 1em;
+}
+
+.top_bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: $topBarHeight;
+  padding: 0 1em 0 .5em;
+
+  .header {
+    font-size: 1.4em;
+    margin-left: .5em;
+  }
+  .icon--search,
+  .icon--chevron-left {
+    font-size: 2.5em;
+    padding: .22em;
+  }
+  .search_box {
+    border-radius: 0;
+    background: $midGrey;
+    border: 0;
+    height: 75%;
+    font-size: 1.1em;
+    padding: 1em 1em 1em 2.4em;
+    margin: .5em 0;
+  }
+  .search_icon {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    font-size: .7em;
+    margin-left: .8em;
+  }
+  .clear_search {
+    opacity:.2;
+    -webkit-transition: all 300ms;
+    &.active {
+      opacity:1;
+    }
+  }
+}
+
+.artist_collection {
+  margin-top: 3.5em;
+  margin-bottom: .5em;
+  padding: .2em;
+}
+
+.artist_image {
+  width: 6em;
+  height: 6em;
+  background-position: center center;
+  background-size: cover;
+  background-color: $highlight;
+
+    .count {
+        background: lighten($midGrey, 5%);
+
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+        font-size: 1em;
+        font-family: monospace;
+        font-weight: 900;
+        margin-top: -.3em;
+        margin-left: -.3em;
+    }
+}
+.artist_list_item {
+
+  max-width: 50%;
+  width: 50%;
+  padding: .1em;
+  max-height: 14em;
+  .artist_image {
+    font-size: 1.1em;
+  }
+}
+.artist_list_item_inner {
+  background: $darkGrey;
+  padding: 1.5em;
+}
+.artist_name_group {
+  font-size: .8em;
+  padding-top: 1.5em;
+  text-align: center;
+  .artist_name {
+    text-align: center;
+  }
+  .location {
+    opacity: .5;
+    font-size: .7em;
+  }
+}
+
+
+
+.icon__container {
+  width: 1em;
+  height: 1em;
+  .icon {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+}
+
+
+.search_results_container {
+    padding-top: $topBarHeight;
+    background: $overlay;
+    -webkit-transform: translate3d(100%,0,0);
+    -webkit-transition: all 300ms;
+    &.state-active {
+      -webkit-transform: translate3d(0,0,0);
+
+    }
+
+    .search_result {
+      position: relative;
+      margin-bottom: 2em;
+    }
+    .search_result_names {
+        width: 1px; // super weird hack to get the ellipsis working right
+    }
+    .search_results_inner_container {
+        .added_icon {
+          position: absolute;
+          top: -.75em;
+          left: -.75em;
+          font-size: .5em;
+        }
+    }
+    .artist_image {
+      font-size: .5em;
+    }
+    .artist_name {
+      font-size: 1em;
+    }
+    .artist_name--secondary {
+      font-size: .9em;
+      opacity: .7;
+    }
+    .icon__container {
+      width: 3em;
+      height: 3em;
+      padding: .8em;
+    }
+    .icon_container--active {
+      background: $highlight;
+    }
+}
+
+
+
+
+.artist {
+
+  min-height: 22em;
+  .remove_container {
+    position: absolute;
+    top: 20em - 1.5em;
+    right: 1.5em;
+    width: 3em;
+    height: 3em;
+  }
+  .remove {
+    width: 3em;
+    height: 3em;
+    padding: .6em;
+    background: $highlight;
+
+  }
+
+  //artist page
+  .artist_background_group {
+      height: 20em;
+      overflow: hidden;
+      .count {
+        background: rgba(0,0,0,.9);
+        // border: 2px solid rgba(255,255,255,.4);
+        margin: .05em;
+      }
+      .artist_background {
+          background-position: center center;
+          background-size: cover;
+          overflow: hidden;
+          filter: brightness(40%);
+          // filter: blur(10px) brightness(40%);
+      }
+      .artist_image {
+        font-size: 1.5em;
+      }
+
+      .icon__container {
+        width: 3em;
+        height: 3em;
+        padding: .6em;
+      }
+      .artist_name {
+        font-size: 1.9em;
+        padding: 0 1em;
+        margin-top: .3em;
+        text-align: center;
+      }
+      .album_count {
+        font-size: .9em;
+        opacity:.5;
+      }
+  }
+
+  .albums_container{
+    // overflow: hidden;
+    // padding: 1.5em 1em 1em 1em;
+    padding: .1em;
+  }
+
+  .album {
+    max-width: 50%;
+    width: 50%;
+    padding: .2em;
+    &:nth-child(2){
+      .inner {
+        -webkit-transition: all 300ms 50ms;
+      }
+    }
+    &:nth-child(3){
+      .inner {
+        -webkit-transition: all 300ms 100ms;
+      }
+    }
+    &:nth-child(4){
+      .inner {
+        -webkit-transition: all 300ms 150ms;
+      }
+    }
+    &.state-active {
+      .inner {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+    .inner {
+      -webkit-transition: all 300ms;
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25px, 0);
+      background: $darkGrey;
+      // max-width: 100%;
+      // width: 100%;
+      width: 0;
+      padding: 1.5em .7em 1.5em;
+      .artist_image {
+        font-size: 1.5em;
+        margin: 0 0 1em 0;
+      }
+      .album_name {
+        font-size:.9em;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.album_background_group {
+    height: 20em;
+    .album_background {
+      background-position: center center;
+      background-size: cover;
+      opacity: .8;
+    }
+
+    .album_artist_group {
+      padding: .75em;
+      position: relative;
+
+      // background: $lightOverlay;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+      &:after {
+        content: '';
+        position: absolute;
+        height: 260%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+
+    }
+    .artist_image {
+      font-size: .5em;
+      position: relative;
+      z-index: 10;
+    }
+    .artist_album_name {
+      margin-left: 1em;
+      font-size: .8em;
+      position: relative;
+      z-index: 10;
+
+    }
+    .artist_name {
+      opacity:.7;
+      font-size: .9em;
+      // text-transform: uppercase;
+    }
+    .album_name {
+      font-size: 1.3em;
+
+    }
+}
+
+
+.tracklist {
+  .track {
+    padding: 1em 0;
+    border-bottom: 2px solid $darkGrey;
+  }
+  .track_title {
+    font-size: 1em;
+    font-weight: 100;
+  }
+  .track_number {
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: monospace;
+    margin-right: .75em;
+    height: 2em;
+    width: 2em;
+    // background: #222;
+    border: 3px solid #fff;
+  }
+}
+
+.player_container {
+    max-height: 5em;
+    .artist_image {
+      font-size: .5em;
+    }
+    .react-audio-player {
+        width: 100%;
+    }
+}
+.tag_group {
+  font-size: .8em;
+  padding: .5em 2em 2em 2em;
+  margin-bottom: 1em;
+}
+.tag {
+  display: inline-block;
+  margin:0 1em 1em 0;
+  background: $midGrey;
+  border-radius: 100em;
+  padding: .5em 1em;
+  border: 1px solid lighten($midGrey,30%);
+  color: #fff;
+}
+
+.related {
+  .flex {
+    margin: .2em 0;
+  }
+  .artist_image {
+    font-size: .6em;
+    margin-right: 1em;
+  }
+}
+
+// background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+// background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+// background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+// background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+// background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */

@@ -1,0 +1,14 @@
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="de">
+            <polygon id="Shape" fill="#FFFFFF" points="-0.504785156 14.570492 99.7704102 14.570492 99.7704102 85.429508 -0.504785156 85.429508"></polygon>
+            <g transform="translate(-1.000000, 12.000000)" id="Group">
+                <g>
+                    <polygon id="Shape" fill="#FFCE00" points="0 50.5613306 101 50.5613306 101 75.8423119 0 75.8423119"></polygon>
+                    <polygon id="Shape" fill="#000000" points="0 0 101 0 101 25.2806653 0 25.2806653"></polygon>
+                    <polygon id="Shape" fill="#DD0000" points="0 25.2806653 101 25.2806653 101 50.5613306 0 50.5613306"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

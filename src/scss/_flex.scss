@@ -1,0 +1,118 @@
+// FLEX
+
+@mixin display_flex{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin flex_justify_content($direction) {
+    -webkit-justify-content: $direction;
+    -moz-justify-content: $direction;
+    -ms-justify-content: $direction;
+    justify-content: $direction;
+}
+
+@mixin flex_align_items($direction) {
+    -webkit-align-items: $direction;
+    -ms-flex-align: $direction;
+    align-items: $direction;
+}
+
+@mixin flex_direction($direction){
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+@mixin flex_align_content($direction) {
+    -webkit-align-content: $direction;
+    -ms-flex-line-pack: $direction;
+    align-content: $direction;
+}
+
+// @mixin flex_align_self($direction) {
+//     -webkit-align-self: $direction;
+//     align-self: $direction;
+// }
+
+.flex {
+
+
+
+    // img {
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
+    -webkit-flex: 1 1 auto;
+    @include display_flex;
+
+    // assume HORIZONTAL
+    &.left {
+        @include flex_justify_content(flex-start);
+    }
+    &.center {
+        @include flex_justify_content(center);
+    }
+    &.right {
+        @include flex_justify_content(flex-end);
+    }
+    &.top {
+        @include flex_align_items(flex-start);
+    }
+    &.middle {
+        @include flex_align_items(center);
+    }
+    &.bottom {
+        @include flex_align_items(flex-end);
+    }
+
+    // VERTICAL
+    &.vertical {
+        @include flex_direction(column);
+
+        &.top {
+            @include flex_justify_content(flex-start);
+        }
+        &.middle {
+            @include flex_justify_content(center);
+        }
+        &.bottom {
+            @include flex_justify_content(flex-end);
+        }
+        &.left {
+            @include flex_align_items(flex-start);
+        }
+        &.center {
+            @include flex_align_items(center);
+        }
+        &.right {
+            @include flex_align_items(flex-end);
+        }
+    }
+
+    &.between {
+        @include flex_justify_content(space-between);
+    }
+
+    &.around {
+        @include flex_justify_content(space-around);
+    }
+
+    &.inline {
+        display: inline-flex;
+    }
+
+    &.shrink {
+        -webkit-flex: 0 0 auto;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.stretch {
+        @include flex_align_items(stretch);
+    }
+
+}

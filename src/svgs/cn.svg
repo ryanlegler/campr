@@ -1,0 +1,27 @@
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cn">
+            <polygon id="Shape" fill="#FFFFFF" points="-0.504785156 14.570492 99.7704102 14.570492 99.7704102 85.429508 -0.504785156 85.429508"></polygon>
+            <g transform="translate(-1.000000, 11.000000)" id="Group">
+                <g>
+                    <polygon id="Shape" fill="#DE2910" points="0 0 102 0 102 76 0 76"></polygon>
+                    <g id="a-link" transform="translate(7.649984, 7.600000)" fill="#FFDE00">
+                        <polygon id="a" points="4.7276409 20.634 11.4748566 0 18.2220722 20.634 0.550793115 7.866 22.39892 7.866"></polygon>
+                    </g>
+                    <g id="a-link" transform="translate(37.948702, 7.604787) rotate(239.070308) translate(-37.948702, -7.604787) translate(33.948702, 4.104787)" fill="#FFDE00">
+                        <polygon id="a" points="1.57626363 6.87814872 3.82535622 0.000213183134 6.07444882 6.87814872 0.183968212 2.62218861 7.46674423 2.62218861"></polygon>
+                    </g>
+                    <g id="a-link" transform="translate(45.567912, 15.042862) rotate(261.890111) translate(-45.567912, -15.042862) translate(41.567912, 11.542862)" fill="#FFDE00">
+                        <polygon id="a" points="1.58058815 6.88058114 3.8296878 0.00266532067 6.07878744 6.88058114 0.188288373 2.62463323 7.47108722 2.62463323"></polygon>
+                    </g>
+                    <g id="a-link" transform="translate(45.652898, 26.352054) rotate(-74.040208) translate(-45.652898, -26.352054) translate(41.652898, 22.852054)" fill="#FFDE00">
+                        <polygon id="a" points="1.57568801 6.87779713 3.82478632 -0.000122113642 6.07388462 6.87779713 0.183389064 2.6218471 7.46618357 2.6218471"></polygon>
+                    </g>
+                    <g id="a-link" transform="translate(37.727390, 33.569951) rotate(-51.320349) translate(-37.727390, -33.569951) translate(33.727390, 29.569951)" fill="#FFDE00">
+                        <polygon id="a" points="1.57141986 7.8769631 3.82050929 0.999015095 6.06959871 7.8769631 0.179126407 3.62099527 7.46189217 3.62099527"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
