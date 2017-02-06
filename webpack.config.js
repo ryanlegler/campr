@@ -62,8 +62,8 @@ if (production) {
         new S3Plugin({
           // s3Options are required
           s3Options: {
-              accessKeyId: 'AKIAIOEXJOQ4JVMWTENA',
-              secretAccessKey: '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',
+              accessKeyId: 'xxx',
+              secretAccessKey: 'xxx',
               region: 'us-west-2'
           },
           s3UploadOptions: {
